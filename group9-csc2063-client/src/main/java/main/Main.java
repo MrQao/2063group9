@@ -1,0 +1,21 @@
+package main;
+
+import view.CLI.CLI;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		while(true)
+		{
+			if(CLI.view(0))
+			{
+				user=CLI.getuser();
+				
+			}
+			
+		}
+		
+	}
+
+}
