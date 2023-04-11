@@ -131,3 +131,31 @@
 2023-04-11 23:49:55,988 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\main\resources
 2023-04-11 23:49:55,989 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
 2023-04-11 23:49:55,990 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\test\resources
+2023-04-11 23:51:12,863 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:51:12,864 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\main\resources
+2023-04-11 23:51:12,864 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:51:12,865 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\test\resources
+2023-04-11 23:53:29,656 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:53:29,657 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\main\resources
+2023-04-11 23:53:29,658 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:53:29,658 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\test\resources
+2023-04-11 23:55:49,382 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:55:49,382 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\main\resources
+2023-04-11 23:55:49,384 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:55:49,384 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\test\resources
+2023-04-11 23:55:50,390 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:55:50,391 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\main\resources
+2023-04-11 23:55:50,392 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:55:50,392 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\test\resources
+2023-04-11 23:56:33,133 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:56:33,134 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\main\resources
+2023-04-11 23:56:33,135 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-11 23:56:33,136 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\test\resources
+2023-04-12 00:00:57,805 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-12 00:00:57,806 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\main\resources
+2023-04-12 00:00:57,806 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-12 00:00:57,807 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\test\resources
+2023-04-12 00:01:03,049 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-12 00:01:03,050 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\main\resources
+2023-04-12 00:01:03,050 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-12 00:01:03,051 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\java\2063as2\group9-csc2063-client\src\test\resources

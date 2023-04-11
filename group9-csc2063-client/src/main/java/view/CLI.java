@@ -5,7 +5,20 @@ public class CLI {
 	{}
 
 	public static int page(int state) {
-		// TODO Auto-generated method stub
+		switch (state) {
+		case 0:
+			pages.login();
+			break;
+			
+		case 1:
+			pages.loggedin();
+			
+		default:
+			pages.exit();
+			break;
+		}
+		
+		
 		return 0;
 	}
 }

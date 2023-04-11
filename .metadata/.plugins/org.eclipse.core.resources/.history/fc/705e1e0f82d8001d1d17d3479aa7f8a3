@@ -14,7 +14,7 @@ public class Controller {
 		
 	}
 	
-	public void assignTask()
+	public void assign()
 	{
 		
 	}
