@@ -6,13 +6,12 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int state=0;
 		while(true)
 		{
-			state=CLI.page(state);
-			if(state==-1)
+			if(CLI.view(0))
 			{
-				break;
+				user=CLI.getuser();
+				
 			}
 			
 		}

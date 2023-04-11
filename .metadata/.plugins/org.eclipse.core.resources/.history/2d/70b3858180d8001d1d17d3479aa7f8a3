@@ -12,7 +12,7 @@ public class Main {
 			state=CLI.page(state);
 			if(state==-1)
 			{
-				break;
+				
 			}
 			
 		}
