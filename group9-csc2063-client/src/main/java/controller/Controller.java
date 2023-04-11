@@ -4,14 +4,15 @@ public class Controller {
 	public Controller()
 	{}
 	
-	public void signUp()
+	public boolean signUp()
 	{
+		return true;
 		
 	}
 	
-	public void signIn()
+	public boolean signIn()
 	{
-		
+		return true;
 	}
 	
 	public void assignTask()

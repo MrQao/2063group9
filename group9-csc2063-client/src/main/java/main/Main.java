@@ -9,6 +9,7 @@ public class Main {
 		int state=0;
 		while(true)
 		{
+			System.out.println();
 			state=CLI.page(state);
 			if(state==-1)
 			{
