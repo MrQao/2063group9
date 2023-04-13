@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import architector.Architector;
+import architector.Architectors;
 import engineer.Engineer;
 import engineer.Engineers;
 import role.Role;
@@ -42,10 +44,10 @@ public class Controller {
 		}
 		else if(role.equals(new Role().Arc()))
 		{
-			Engineers engineers=readEng();
-			for(Engineer engineer : engineers.getEngineersObjects())
+			Architectors architectors=readArc();
+			for(Architector architector : architectors.getEngineersObjects())
 			{
-				if(engineer.getName()==name) 
+				if(architector.getName()==name) 
 				{return -1;}
 			}
 			return 1;
@@ -80,6 +82,14 @@ public class Controller {
 		marshaller.marshal(engineers, outputStream);
 		outputStream.close();
 	}
+	public void storeArc(Architectors architectors) throws JAXBException, IOException
+	{
+		FileOutputStream outputStream = new FileOutputStream(pathEng);
+		JAXBContext jAXBContext = JAXBContext.newInstance(Architectors.class);
+		Marshaller marshaller = jAXBContext.createMarshaller();
+		marshaller.marshal(architectors, outputStream);
+		outputStream.close();
+	}
 	public Engineers readEng() throws JAXBException, IOException
 	{
 		Engineers engineers;
@@ -89,5 +99,15 @@ public class Controller {
 		engineers = (Engineers)unmarshaller.unmarshal(inputStream);
 		inputStream.close();
 		return engineers;
+	}
+	public Architectors readArc() throws JAXBException, IOException
+	{
+		Architectors architectors;
+		FileInputStream inputStream = new FileInputStream(pathEng);
+		JAXBContext jAXBContext = JAXBContext.newInstance(Architectors.class);
+		Unmarshaller unmarshaller = jAXBContext.createUnmarshaller();
+		architectors = (Architectors)unmarshaller.unmarshal(inputStream);
+		inputStream.close();
+		return architectors;
 	}
 }
