@@ -17,5 +17,5 @@ public class Engineers {
 		engineersObjects.add(employee);
 	}
 	
-	ArrayList<Engineer> getEngineersObjects(){ return engineersObjects; }
+	public ArrayList<Engineer> getEngineersObjects(){ return engineersObjects; }
 }
