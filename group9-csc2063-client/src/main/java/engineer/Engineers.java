@@ -1,4 +1,4 @@
-package employee;
+package engineer;
 
 import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -12,9 +12,9 @@ public class Engineers {
 	
 	public Engineers() {}
 	
-	public void add(Engineer employee)
+	public void add(Engineer engineer)
 	{
-		engineersObjects.add(employee);
+		engineersObjects.add(engineer);
 	}
 	
 	public ArrayList<Engineer> getEngineersObjects(){ return engineersObjects; }
