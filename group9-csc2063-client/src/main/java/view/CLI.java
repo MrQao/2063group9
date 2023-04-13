@@ -1,24 +1,20 @@
 package view;
 
-public class CLI {
-	public CLI()
-	{}
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-	public static int page(int state) {
-		switch (state) {
-		case 0:
-			pages.login();
-			break;
+import javax.xml.bind.JAXBException;
+
+import controller.Controller;
+
+public class CLI {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		while(true)
+		{
+			System.out.println();
 			
-		case 1:
-			pages.loggedin();
-			
-		default:
-			pages.exit();
-			break;
 		}
-		
-		
-		return 0;
 	}
 }
