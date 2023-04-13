@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import javax.lang.model.element.NestingKind;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -24,7 +25,7 @@ public class Controller {
 	String workDir = System.getProperty("user.home");
 	String pathEng = workDir + "\\Engineers.xml";
 	String pathArc = workDir + "\\Architects.xml";
-	
+	boolean eng=false;
 	
 	
 	public Controller()
@@ -57,12 +58,16 @@ public class Controller {
 	
 	public boolean signIn()
 	{
+		eng=true;
 		return true;
 	}
 	
-	public void assignTask()
+	public void assignTask(String name,int proNum)
 	{
-		
+		if(eng)
+		{
+			
+		}
 	}
 	
 	public void updateTask()
@@ -84,7 +89,7 @@ public class Controller {
 	}
 	public void storeArc(Architectors architectors) throws JAXBException, IOException
 	{
-		FileOutputStream outputStream = new FileOutputStream(pathEng);
+		FileOutputStream outputStream = new FileOutputStream(pathArc);
 		JAXBContext jAXBContext = JAXBContext.newInstance(Architectors.class);
 		Marshaller marshaller = jAXBContext.createMarshaller();
 		marshaller.marshal(architectors, outputStream);
@@ -103,7 +108,7 @@ public class Controller {
 	public Architectors readArc() throws JAXBException, IOException
 	{
 		Architectors architectors;
-		FileInputStream inputStream = new FileInputStream(pathEng);
+		FileInputStream inputStream = new FileInputStream(pathArc);
 		JAXBContext jAXBContext = JAXBContext.newInstance(Architectors.class);
 		Unmarshaller unmarshaller = jAXBContext.createUnmarshaller();
 		architectors = (Architectors)unmarshaller.unmarshal(inputStream);
