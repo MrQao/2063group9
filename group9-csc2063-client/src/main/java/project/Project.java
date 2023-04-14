@@ -1,11 +1,8 @@
 package project;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
 
 
 public class Project {
@@ -14,29 +11,22 @@ public class Project {
 	int projectNumber=-1;
 	int percent = 0;
 	
-	Project(){}
-	
-	int setproject(int num) throws JAXBException, IOException
-	{
-		
-		for(int i:readProNum().getprojectNumbers())
-		{
-			if(i==num)
-			{
-				projectNumber=num;
-				return 1;
-			}
-		}
-		return -1;
+	public Project(int num) throws JAXBException, IOException{
+		new ProjectNumber().add(num);
+		projectNumber=num;
 	}
-	public ProjectNumber readProNum() throws JAXBException, IOException
+	public int getNum()
 	{
-		ProjectNumber projectNumber;
-		FileInputStream inputStream = new FileInputStream(pathProNum);
-		JAXBContext jAXBContext = JAXBContext.newInstance(ProjectNumber.class);
-		Unmarshaller unmarshaller = jAXBContext.createUnmarshaller();
-		projectNumber = (ProjectNumber)unmarshaller.unmarshal(inputStream);
-		inputStream.close();
 		return projectNumber;
+	}
+	public boolean upgrade(int cent)
+	{
+		if(cent<percent||percent==100)return false;
+		percent=cent;
+		return true;
+	}
+	public int getpercent()
+	{
+		return percent;
 	}
 }
