@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -17,6 +18,7 @@ import architector.Architector;
 import architector.Architectors;
 import engineer.Engineer;
 import engineer.Engineers;
+import project.ProjectNumber;
 import role.Role;
 
 @XmlRootElement
@@ -25,7 +27,10 @@ public class Controller {
 	String workDir = System.getProperty("user.home");
 	String pathEng = workDir + "\\Engineers.xml";
 	String pathArc = workDir + "\\Architects.xml";
+	
 	boolean eng=false;
+	boolean arc=false;
+	String userlogd=null;
 	
 	
 	public Controller()
@@ -35,49 +40,145 @@ public class Controller {
 	{
 		if(role.equals(new Role().Eng()))
 		{
-			Engineers engineers=readEng();
+			Engineers engineers = new Engineers();
+			if(new File(pathEng).exists())
+				{engineers=readEng();}
+			if(engineers.getEngineersObjects().size() == 4) return -1;
 			for(Engineer engineer : engineers.getEngineersObjects())
 			{
 				if(engineer.getName()==name) 
 				{return -1;}
 			}
+			engineers.getEngineersObjects().add(new Engineer(name));
+			storeEng(engineers);
 			return 1;
 		}
 		else if(role.equals(new Role().Arc()))
 		{
-			Architectors architectors=readArc();
-			for(Architector architector : architectors.getEngineersObjects())
+			Architectors architectors = new Architectors();
+			if(new File(pathArc).exists())
+				{architectors=readArc();}
+			if(architectors.getArchitectorObjects().size() == 4)return -1;
+			for(Architector architector : architectors.getArchitectorObjects())
 			{
 				if(architector.getName()==name) 
 				{return -1;}
 			}
+			architectors.getArchitectorObjects().add(new Architector(name));
+			storeArc(architectors);
 			return 1;
 		}
 		return -1;
 	}
 	
-	public boolean signIn()
+	public int signIn(String userID) throws JAXBException, IOException
 	{
-		eng=true;
-		return true;
-	}
-	
-	public void assignTask(String name,int proNum)
-	{
-		if(eng)
+		userlogd=null;
+		Engineers engineers = new Engineers();
+		if(new File(pathEng).exists())
+			{engineers=readEng();}
+		eng=false;
+		arc=false;
+		for(Engineer engineer : engineers.getEngineersObjects())
 		{
-			
+			if(engineer.getName()==userID) 
+			{
+				eng=true;
+				userlogd=userID;
+				break;
+			}
 		}
+		Architectors architectors=readArc();
+		for(Architector architector : architectors.getArchitectorObjects())
+		{
+			if(architector.getName()==userID)
+			{
+				arc=true;
+				userlogd=userID;
+				break;
+			}
+		}
+		if(arc||eng)return 1;
+		return -1;
 	}
 	
-	public void updateTask()
+	public int assignTask(String userID, int projectNum) throws JAXBException, IOException
 	{
-		
+		int flag=-1;
+		if(!arc)return -1;
+		if(new File(pathEng).exists()) {
+			Engineers engineers=readEng();
+			for(Engineer engineer : engineers.getEngineersObjects())
+			{
+				if(engineer.getName()==userID)
+				{
+					engineer.addProject(projectNum);
+					flag=1;
+					storeEng(engineers);
+				}
+			}
+		}
+		if(new File(pathArc).exists()) {
+			Architectors architectors=readArc();
+			for(Architector architector : architectors.getArchitectorObjects())
+			{
+				if(architector.getName()==userID)
+				{
+					architector.addProject(projectNum);
+					flag=1;
+					storeArc(architectors);
+				}
+			}
+		}
+		return flag;
 	}
 	
-	public void checkTast()
+	public int updateTask(String userID, int projectnumber, int percent) throws JAXBException, IOException
 	{
-		
+		int flag=-1;
+		if(!arc)return -1;
+		if(!new ProjectNumber().check(projectnumber))return -1;
+		if(new File(pathEng).exists()) {
+			Engineers engineers=readEng();
+			for(Engineer engineer : engineers.getEngineersObjects())
+			{
+				if(engineer.getName()==userID)
+				{
+					engineer.upgradePro(projectnumber, percent);
+					storeEng(engineers);
+					flag=1;
+				}
+			}
+		}
+		if(new File(pathArc).exists()) {
+			Architectors architectors=readArc();
+			for(Architector architector : architectors.getArchitectorObjects())
+			{
+				if(architector.getName()==userID)
+				{
+					architector.upgradePro(projectnumber,percent);
+					storeArc(architectors);
+					flag=1; 
+				}
+			}
+		}
+		return flag;
+	}
+	
+	public int checkTast() throws JAXBException, IOException
+	{
+		if(!arc)return -1;
+		if(new File(pathArc).exists()) {
+			Architectors architectors=readArc();
+			for(Architector architector : architectors.getArchitectorObjects())
+			{
+				if(architector.getName()==userlogd)
+				{
+					if(architector.printPro())return 1;
+				}
+			}
+		}
+		return -1;
 	}
 	public void storeEng(Engineers engineers) throws JAXBException, IOException
 	{

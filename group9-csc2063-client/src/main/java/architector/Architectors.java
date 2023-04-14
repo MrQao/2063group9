@@ -19,5 +19,5 @@ private ArrayList<Architector> architectorObjects = new ArrayList<Architector>()
 		architectorObjects.add(architector);
 	}
 	
-	public ArrayList<Architector> getEngineersObjects(){ return architectorObjects; }
+	public ArrayList<Architector> getArchitectorObjects(){ return architectorObjects; }
 }
