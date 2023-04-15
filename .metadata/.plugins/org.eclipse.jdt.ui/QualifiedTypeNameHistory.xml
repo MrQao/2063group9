@@ -37,4 +37,5 @@
     <fullyQualifiedTypeName name="service2.project.ProjectNumber"/>
     <fullyQualifiedTypeName name="service1.project.Project"/>
     <fullyQualifiedTypeName name="service1.project.ProjectNumber"/>
+    <fullyQualifiedTypeName name="service2.Service2"/>
 </qualifiedTypeNameHistroy>

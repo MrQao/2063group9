@@ -1,8 +1,13 @@
 package service2.project;
 
 import java.io.IOException;
+import java.net.URL;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.namespace.QName;
+import javax.xml.ws.Service;
+
+import model.filestorage.Storage;
 
 
 public class Project {
@@ -16,7 +21,15 @@ public class Project {
 	}
 	public ProjectNumber getNum()
 	{
-		return projectNumber;
+		URL url = new URL( "http://localhost:8080/CSC2063-Service-2/?wsdl" );
+
+		QName qname = new QName( "http://fileStorage.model/", "FileStorageService" );
+
+		Service service = Service.create( url, qname );
+
+		Storage obj = service.getPort( Storage.class );
+
+		return obj.loginCheck( username, password );
 	}
 	public boolean upgrade(int cent)
 	{
