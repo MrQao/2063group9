@@ -35,9 +35,9 @@ public class Controller {
 	public Controller()
 	{}
 	
-	public int signUp(String name,String role) throws JAXBException, IOException
+	public int signUp(String name,Role role) throws JAXBException, IOException
 	{
-		if(role.equals(new Role().Eng()))
+		if(role.equals(Role.ENGINEER))
 		{
 			Engineers engineers = new Engineers();
 			if(new File(pathEng).exists())
@@ -52,7 +52,7 @@ public class Controller {
 			storeEng(engineers);
 			return 1;
 		}
-		else if(role.equals(new Role().Arc()))
+		else if(role.equals(Role.ARCHITECTOR))
 		{
 			Architectors architectors = new Architectors();
 			if(new File(pathArc).exists())

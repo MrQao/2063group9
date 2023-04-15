@@ -27,10 +27,10 @@
     <fullyQualifiedTypeName name="project.Project"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="controller.Controller"/>
-    <fullyQualifiedTypeName name="role.Role"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="service1Interface.Project"/>
     <fullyQualifiedTypeName name="service1Interface.Service2Impl"/>
     <fullyQualifiedTypeName name="service1Interface.ProjectNumber"/>
     <fullyQualifiedTypeName name="project.ProjectNumber"/>
+    <fullyQualifiedTypeName name="role.Role"/>
 </qualifiedTypeNameHistroy>
