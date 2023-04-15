@@ -33,4 +33,8 @@
     <fullyQualifiedTypeName name="service1Interface.ProjectNumber"/>
     <fullyQualifiedTypeName name="project.ProjectNumber"/>
     <fullyQualifiedTypeName name="role.Role"/>
+    <fullyQualifiedTypeName name="service2.project.Project"/>
+    <fullyQualifiedTypeName name="service2.project.ProjectNumber"/>
+    <fullyQualifiedTypeName name="service1.project.Project"/>
+    <fullyQualifiedTypeName name="service1.project.ProjectNumber"/>
 </qualifiedTypeNameHistroy>

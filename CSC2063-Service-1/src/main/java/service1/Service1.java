@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
 
-import service1.project.ProjectNumber;
+import service2.project.ProjectNumber;
 
 public interface Service1 {
 	public int signUp(String name) throws JAXBException, IOException;

@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import javax.lang.model.element.NestingKind;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -36,9 +35,9 @@ public class Controller {
 	public Controller()
 	{}
 	
-	public int signUp(String name,String role) throws JAXBException, IOException
+	public int signUp(String name,Role role) throws JAXBException, IOException
 	{
-		if(role.equals(new Role().Eng()))
+		if(role.equals(Role.ENGINEER))
 		{
 			Engineers engineers = new Engineers();
 			if(new File(pathEng).exists())
@@ -53,18 +52,18 @@ public class Controller {
 			storeEng(engineers);
 			return 1;
 		}
-		else if(role.equals(new Role().Arc()))
+		else if(role.equals(Role.ARCHITECTOR))
 		{
 			Architectors architectors = new Architectors();
 			if(new File(pathArc).exists())
 				{architectors=readArc();}
 			if(architectors.getArchitectorObjects().size() == 4)return -1;
-			for(Architector architector : architectors.getArchitectorObjects())
+			for(Architect architector : architectors.getArchitectorObjects())
 			{
 				if(architector.getName()==name) 
 				{return -1;}
 			}
-			architectors.getArchitectorObjects().add(new Architector(name));
+			architectors.getArchitectorObjects().add(new Architect(name));
 			storeArc(architectors);
 			return 1;
 		}
@@ -89,7 +88,7 @@ public class Controller {
 			}
 		}
 		Architectors architectors=readArc();
-		for(Architector architector : architectors.getArchitectorObjects())
+		for(Architect architector : architectors.getArchitectorObjects())
 		{
 			if(architector.getName()==userID)
 			{
@@ -102,7 +101,7 @@ public class Controller {
 		return -1;
 	}
 	
-	public int assignTask(String userID, int projectNum) throws JAXBException, IOException
+	public int assignTask(String userID, ProjectNumber projectNum) throws JAXBException, IOException
 	{
 		int flag=-1;
 		if(!arc)return -1;
@@ -120,7 +119,7 @@ public class Controller {
 		}
 		if(new File(pathArc).exists()) {
 			Architectors architectors=readArc();
-			for(Architector architector : architectors.getArchitectorObjects())
+			for(Architect architector : architectors.getArchitectorObjects())
 			{
 				if(architector.getName()==userID)
 				{
@@ -133,11 +132,10 @@ public class Controller {
 		return flag;
 	}
 	
-	public int updateTask(String userID, int projectnumber, int percent) throws JAXBException, IOException
+	public int updateTask(String userID, ProjectNumber projectnumber, int percent) throws JAXBException, IOException
 	{
 		int flag=-1;
 		if(!arc)return -1;
-		if(!new ProjectNumber().check(projectnumber))return -1;
 		if(new File(pathEng).exists()) {
 			Engineers engineers=readEng();
 			for(Engineer engineer : engineers.getEngineersObjects())
@@ -152,7 +150,7 @@ public class Controller {
 		}
 		if(new File(pathArc).exists()) {
 			Architectors architectors=readArc();
-			for(Architector architector : architectors.getArchitectorObjects())
+			for(Architect architector : architectors.getArchitectorObjects())
 			{
 				if(architector.getName()==userID)
 				{
@@ -170,7 +168,7 @@ public class Controller {
 		if(!arc)return -1;
 		if(new File(pathArc).exists()) {
 			Architectors architectors=readArc();
-			for(Architector architector : architectors.getArchitectorObjects())
+			for(Architect architector : architectors.getArchitectorObjects())
 			{
 				if(architector.getName()==userlogd)
 				{

@@ -1,0 +1,17 @@
+model\filestorage\Storage.class
+model\package-info.class
+view\CLI\StudentCLI.class
+model\filestorage\FileStorageService.class
+model\filestorage\JAXBException.class
+model\AbstractCollection.class
+model\IOException.class
+view\CLI\StdInput.class
+model\Throwable.class
+controller\StorageController.class
+model\JAXBException.class
+controller\StorageType.class
+model\ArrayList.class
+model\filestorage\IOException.class
+model\AbstractList.class
+model\ObjectFactory.class
+model\StackTraceElement.class

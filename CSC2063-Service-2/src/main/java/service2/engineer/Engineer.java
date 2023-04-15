@@ -1,40 +1,46 @@
 package service2.engineer;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 import service2.project.Project;
 import service2.project.ProjectNumber;
 
-public class Engineer extends Project{
-	String name;
-
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Engineer {
+	private String name;
+	private ArrayList<Project> projects = new ArrayList<>();
+	
 	Engineer(){}
+	
 	public Engineer(String name)
 	{
 		this.name = name;
 	}
 	public String getName() { return name; }
-	public ProjectNumber getProjects()
+	public ArrayList<Project> getProjects()
 	{
-		return getProjectsNumber();
+		return projects;
 	}
-	public void addProject(ProjectNumber projectnumber) throws JAXBException, IOException
+	public void addProject(ProjectNumber num) throws JAXBException, IOException
 	{
-		addProjectNumber(projectnumber);
+		projects.add(new Project(num));
 	}
-
+	public Project getProject(ProjectNumber projectnumber)
+	{
+		for(Project project:projects)
+		{
+			if(project.getNum()==projectnumber)
+				return project;
+		}
+		return null;
+	}
 	public void upgradePro(ProjectNumber projectnumber, int percent)
 	{
-		ProjectNumber[] arr = ProjectNumber.values();
-		for(ProjectNumber pro : arr)
-			if(pro == projectnumber)
-				upgrade(percent);
-	}
-	
-	public int printPro(String name)
-	{
-		return this.getpercent();
+		getProject(projectnumber).upgrade(percent);
 	}
 }
