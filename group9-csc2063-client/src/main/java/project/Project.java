@@ -8,14 +8,13 @@ import javax.xml.bind.JAXBException;
 public class Project {
 	String workDir = System.getProperty("user.home");
 	String pathProNum = workDir + "\\ProjectNumbers.xml";
-	int projectNumber=-1;
+	ProjectNumber projectNumber=null;
 	int percent = 0;
 	
-	public Project(int num) throws JAXBException, IOException{
-		new ProjectNumber().add(num);
+	public Project(ProjectNumber num) throws JAXBException, IOException{
 		projectNumber=num;
 	}
-	public int getNum()
+	public ProjectNumber getNum()
 	{
 		return projectNumber;
 	}

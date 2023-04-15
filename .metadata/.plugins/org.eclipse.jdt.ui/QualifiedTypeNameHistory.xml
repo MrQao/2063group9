@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="view.CLI.CLI"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="controller.Controller"/>
     <fullyQualifiedTypeName name="view.pages"/>
     <fullyQualifiedTypeName name="employee.Employee"/>
     <fullyQualifiedTypeName name="employee.Employees"/>
@@ -15,19 +14,23 @@
     <fullyQualifiedTypeName name="employee.Engineers"/>
     <fullyQualifiedTypeName name="employee.Engineer"/>
     <fullyQualifiedTypeName name="javax.management.relation.Role"/>
-    <fullyQualifiedTypeName name="role.Role"/>
     <fullyQualifiedTypeName name="javax.lang.model.element.NestingKind"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="engineer.Engineer"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="engineer.Engineers"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="architector.Architectors"/>
     <fullyQualifiedTypeName name="architector.Architector"/>
-    <fullyQualifiedTypeName name="project.ProjectNumber"/>
     <fullyQualifiedTypeName name="project.Project"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="controller.Controller"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="service1Interface.Project"/>
+    <fullyQualifiedTypeName name="service1Interface.Service2Impl"/>
+    <fullyQualifiedTypeName name="service1Interface.ProjectNumber"/>
+    <fullyQualifiedTypeName name="project.ProjectNumber"/>
+    <fullyQualifiedTypeName name="role.Role"/>
 </qualifiedTypeNameHistroy>

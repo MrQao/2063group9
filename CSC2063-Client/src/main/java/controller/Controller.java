@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import javax.lang.model.element.NestingKind;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -35,9 +36,9 @@ public class Controller {
 	public Controller()
 	{}
 	
-	public int signUp(String name,Role role) throws JAXBException, IOException
+	public int signUp(String name,String role) throws JAXBException, IOException
 	{
-		if(role.equals(Role.ENGINEER))
+		if(role.equals(new Role().Eng()))
 		{
 			Engineers engineers = new Engineers();
 			if(new File(pathEng).exists())
@@ -52,7 +53,7 @@ public class Controller {
 			storeEng(engineers);
 			return 1;
 		}
-		else if(role.equals(Role.ARCHITECTOR))
+		else if(role.equals(new Role().Arc()))
 		{
 			Architectors architectors = new Architectors();
 			if(new File(pathArc).exists())
@@ -101,7 +102,7 @@ public class Controller {
 		return -1;
 	}
 	
-	public int assignTask(String userID, ProjectNumber projectNum) throws JAXBException, IOException
+	public int assignTask(String userID, int projectNum) throws JAXBException, IOException
 	{
 		int flag=-1;
 		if(!arc)return -1;
@@ -132,10 +133,11 @@ public class Controller {
 		return flag;
 	}
 	
-	public int updateTask(String userID, ProjectNumber projectnumber, int percent) throws JAXBException, IOException
+	public int updateTask(String userID, int projectnumber, int percent) throws JAXBException, IOException
 	{
 		int flag=-1;
 		if(!arc)return -1;
+		if(!new ProjectNumber().check(projectnumber))return -1;
 		if(new File(pathEng).exists()) {
 			Engineers engineers=readEng();
 			for(Engineer engineer : engineers.getEngineersObjects())
