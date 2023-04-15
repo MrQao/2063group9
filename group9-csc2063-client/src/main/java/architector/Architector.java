@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
 import project.Project;
+import project.ProjectNumber;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Architector {
@@ -24,30 +25,30 @@ public class Architector {
 	{
 		return projects;
 	}
-	public void addProject(int num) throws JAXBException, IOException
+	public void addProject(ProjectNumber num) throws JAXBException, IOException
 	{
 		projects.add(new Project(num));
 	}
-	public Project getProject(int num)
+	public Project getProject(ProjectNumber projectnumber)
 	{
 		for(Project project:projects)
 		{
-			if(project.getNum()==num)
+			if(project.getNum()==projectnumber)
 				return project;
 		}
 		return null;
 	}
-	public void upgradePro(int num, int percent)
+	public void upgradePro(ProjectNumber projectnumber, int percent)
 	{
-		getProject(num).upgrade(percent);
+		getProject(projectnumber).upgrade(percent);
 	}
 	public boolean printPro()
 	{
 		if(projects==null)return false;
 		for(Project project:projects)
 		{
-			System.out.print("The completion percentage of a project with number p_"+project.getNum()+" by the architect with ID "
-					+name+" is the following: p_"+project.getNum()+" "+project.getpercent());
+			System.out.print("The completion percentage of a project with number "+project.getNum()+" by the architect with ID "
+					+name+" is the following: "+project.getNum()+" "+project.getpercent());
 			System.out.println();
 		}
 		return true;

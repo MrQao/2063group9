@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import javax.lang.model.element.NestingKind;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -102,7 +101,7 @@ public class Controller {
 		return -1;
 	}
 	
-	public int assignTask(String userID, int projectNum) throws JAXBException, IOException
+	public int assignTask(String userID, ProjectNumber projectNum) throws JAXBException, IOException
 	{
 		int flag=-1;
 		if(!arc)return -1;
@@ -133,11 +132,10 @@ public class Controller {
 		return flag;
 	}
 	
-	public int updateTask(String userID, int projectnumber, int percent) throws JAXBException, IOException
+	public int updateTask(String userID, ProjectNumber projectnumber, int percent) throws JAXBException, IOException
 	{
 		int flag=-1;
 		if(!arc)return -1;
-		if(!new ProjectNumber().check(projectnumber))return -1;
 		if(new File(pathEng).exists()) {
 			Engineers engineers=readEng();
 			for(Engineer engineer : engineers.getEngineersObjects())

@@ -1,20 +1,20 @@
-package project;
+package service1Interface;
 
 import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
 
 
-public class Project {
+public class IProject implements Project {
 	String workDir = System.getProperty("user.home");
 	String pathProNum = workDir + "\\ProjectNumbers.xml";
-	ProjectNumber projectNumber=null;
+	int projectNumber=-1;
 	int percent = 0;
-	
-	public Project(ProjectNumber num) throws JAXBException, IOException{
+	public IProject(int num) throws JAXBException, IOException{
+		new IProjectNumber().add(num);
 		projectNumber=num;
 	}
-	public ProjectNumber getNum()
+	public int getNum()
 	{
 		return projectNumber;
 	}

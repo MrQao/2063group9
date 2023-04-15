@@ -7,7 +7,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
-import project.Project;
+import service1Interface.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Architector {
@@ -26,7 +26,7 @@ public class Architector {
 	}
 	public void addProject(int num) throws JAXBException, IOException
 	{
-		projects.add(new Project(num));
+		projects.add(new IProject(num));
 	}
 	public Project getProject(int num)
 	{

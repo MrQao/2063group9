@@ -19,6 +19,10 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\java\2063as2\CSC2063-Service-3\src\main\java"/>
+			<item value="D:\java\2063as2\CSC2063-Service-2\src\main\java"/>
+			<item value="D:\java\2063as2\CSC2063-Service-1"/>
+			<item value="D:\java\2063as2\group9-csc2063-client\src\main\java\controller\Controller.java"/>
 			<item value="D:\java\2063as2\Group9-CSC2063"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -67,6 +71,10 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="CSC2063-Client"/>
+			<item value="CSC2063-Service-3"/>
+			<item value="CSC2063-Service-2"/>
+			<item value="CSC2063-Service-1"/>
 			<item value="group9-csc2063-client"/>
 		</list>
 		<list key="projectNameTemplate">
