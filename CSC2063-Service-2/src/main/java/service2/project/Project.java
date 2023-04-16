@@ -4,10 +4,10 @@ import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
 
-import service2.Service2;
+import service2.IProject;
 
 
-public class Project implements Service2{
+public class Project implements IProject{
 	String workDir = System.getProperty("user.home");
 	String pathProNum = workDir + "\\ProjectNumbers.xml";
 	ProjectNumber projectNumber=null;

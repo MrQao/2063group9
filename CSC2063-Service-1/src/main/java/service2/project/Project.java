@@ -7,7 +7,6 @@ import javax.xml.bind.JAXBException;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
-import model.filestorage.Storage;
 
 
 public class Project {

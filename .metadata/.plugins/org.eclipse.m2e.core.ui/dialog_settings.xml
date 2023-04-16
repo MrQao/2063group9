@@ -2,11 +2,17 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="CSC2063-Service-2-2"/>
+			<item value="CSC2063-Service-1-1"/>
+			<item value="123"/>
 			<item value="qub"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="CSC2063-Service-2-2"/>
+			<item value="CSC2063-Service-1-1"/>
+			<item value="123"/>
 			<item value="Group9-CSC2063"/>
 		</list>
 		<list key="version">
@@ -19,6 +25,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\java\2063as2\CSC2063-Service-2\src\main\java\service2\IProject.java"/>
+			<item value="D:\java\2063as2\group9-csc2063-client\pom.xml"/>
 			<item value="D:\java\2063as2\CSC2063-Service-3\src\main\java"/>
 			<item value="D:\java\2063as2\CSC2063-Service-2\src\main\java"/>
 			<item value="D:\java\2063as2\CSC2063-Service-1"/>
@@ -66,11 +74,15 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="123"/>
+			<item value="test"/>
 			<item value="qub"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="123123"/>
+			<item value="123"/>
 			<item value="CSC2063-Client"/>
 			<item value="CSC2063-Service-3"/>
 			<item value="CSC2063-Service-2"/>
@@ -88,5 +100,11 @@
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="588"/>
+		<item key="x" value="720"/>
+		<item key="y" value="128"/>
 	</section>
 </section>
